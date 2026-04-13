@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register-page.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="./imagens/logo_png.png">
+    <script src="js/index.js"></script>
+    <title>Fast Service</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="inicio">
+            <img src="img/back-removebg-preview.png" alt="Fast Service" width="500">
+        </div>
+
+        <nav>
+            <img src="img/logo-fastservice-removebg-preview.png" alt="Logo do site" class="logo">
+
+            <ul class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">COMO FUNCIONA</a></li>
+                <li><a href="">CATEGORIAS</a></li>
+                <li><a href="">Login/Cadastro</a></li>
+                <li><a href="">PARA EMPRESAS</a></li>
+            </ul>
+
+            <div class="user-area">
+                <img src="img/user.png" alt="User" class="users" id="userIcon">
+
+                <div class="user-menu" id="userMenu">
+                    <h3>Login</h3>
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Senha">
+                    <button>Entrar</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="boneco">
+            <img src="./img/Boneco.png" alt="">
+        </div>
+        <div class="form-container">
+
+            <form>
+                <div class="titulo-cadastro">
+                    <img src="./img/Boneco-escada.png" alt="Trabalhador">
+                    <h2>Cadastro</h2>
+                </div>
+                
+                <!--Caixa de entrada "Nome"-->
+                <input type="text" placeholder="Nome completo" required>
+                <!--Caixa de entrada "CPF"-->
+                <input type="text" placeholder="CPF" required>
+                <!--Caixa de entrada "Data de Nascimento"-->
+                <input type="date" placeholder="DD/MM/AAAA" required>
+                <!--Caixa de entrada "E-mail"-->
+                <input type="email" placeholder="Email" required>
+                <!--Caixa de entrada "Telefone"-->
+                <input type="tel" placeholder="Telefone (11) 99999-9999" required>
+                <!--Caixa de entrada "CEP"-->
+                <input type="text" placeholder="CEP" required>
+                <!--Caixa de entrada "Endereço"-->
+                <input type="text" placeholder="Endereço (Rua, número, bairro)" required>
+                <!--Caixa de entrada "Estado/Cidade"-->
+                <div class="cidade-estado">
+                    <input type="text" placeholder="Cidade" required>
+                        <select required>
+                            <!--Seleção do Estado-->
+                            <option value="UF">UF</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                </div>
+                <!--Caixa de entrada "Senha"-->
+                <input type="password" placeholder="Senha" required>
+                <!--Caixa de entrada "Senha Confirmação"-->
+                <input type="password" placeholder="Confirmar senha" required>
+                <!--Botão de Confirmação-->
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

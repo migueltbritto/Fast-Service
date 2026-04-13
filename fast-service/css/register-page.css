@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #e1effd;
+}
+
+
+.boneco {
+    position: relative;
+    display: inline-block;
+}
+
+.boneco img{
+    height: auto;
+    width: 1050px;
+    margin-top: -100;
+    transform: translatey(-200px);
+    display: block;
+}
+
+.titulo-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 35px;
+}
+
+.titulo-cadastro img {
+    width: 100px;
+    margin-top: -5px;
+}
+
+.titulo-cadastro h2 {
+    font-size: 32px;
+    margin: 0 ; 
+}
+
+ /* PARTE DO REGISTRO */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 80px;
+    min-height: 100vh;
+    padding: 40px;
+    
+}
+
+.form-container {
+    background: white;
+    padding: 50px;
+    width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+form input:focus {
+    border-color: blue;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,0,255,0.3);
+}
+ 
+form button {
+    margin-top: 15px;
+    padding: 12px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: darkblue;
+    transform: translateY(-2px);
+}
+
+.cidade-estado {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.cidade-estado input:first-child {
+    flex: 2;
+}
+
+.cidade-estado input:last-child {
+    flex: 0.2ss;
+    font-size: 0.85em;
+    width: 80px;
+}
+
+.cidade-estado select {
+    flex: 0.2;
+    max-width: 90px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+}
+
+.cidade-estado select:hover {
+    border-color: #007bff;
+}

@@ -8,144 +8,138 @@
     <link rel="icon" href="img/logo-fastservice-removebg-preview.png">
     <script src="js/index.js" defer></script>
     <title>Fast Service</title>
-    
 </head>
 <body>
-  
-  <header class="navbar">
-
-      <div class="inicio">
-          <img src="img/back-removebg-preview.png" alt="Fast Service" width="500">
-      </div>
-
-      <nav>
-          <img src="img/logo-fastservice-removebg-preview.png" alt="Logo do site" class="logo">
-
-          <ul class="menu">
-              <li><a href="">Home</a></li>
-              <li><a href="">COMO FUNCIONA</a></li>
-              <li><a href="">CATEGORIAS</a></li>
-              <li><a href="">Login/Cadastro</a></li>
-              <li><a href="">PARA EMPRESAS</a></li>
-          </ul>
-
-          <div class="user-area">
-              <img src="img/user.png" alt="User" class="users" id="userIcon">
-
-              <div class="user-menu" id="userMenu">
-                  <h3>Login</h3>
-                  <input type="text" placeholder="Email">
-                  <input type="password" placeholder="Senha">
-                  <button>Entrar</button>
-              </div>
-          </div>
-      </nav>
-
-  </header>
-  
-  <!-- HERO -->
-  <section class="hero">
-    <h1>O profissional certo, na hora certa, bem do seu lado.</h1>
-    <p>Encontre especialistas avaliados próximos a você.</p>
-
-    <div class="search-box">
-      <input type="text" id="servico" placeholder="O que você precisa? (ex: Eletricista, Mecânico)">
-      <input type="text" id="local" placeholder="Sua localização">
-      <button onclick="buscar()">Buscar agora</button>
-    </div>
-  </section>
-
-  <!-- PROFISSIONAIS -->
-    <section class="profissionais">
-    <h2>Profissionais próximos a você</h2>
-
-    <div class="carrossel-container">
-
-      <button class="seta esquerda" onclick="scrollCarrossel(-1)">❮</button>
-
-      <div class="carrossel" id="carrossel">
-        
-        <!-- PROFISSIONAIS 01-->
-        <div class="card">
-          
-          <img src="img/mecanico.PNG">
-          <h3>João Silva</h3>
-          <p>Eletricista</p>
-          <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-        
-        </div>
-        <!-- PROFISSIONAIS 02-->
-        <div class="card">
-          
-          <img src="img/eletronico.PNG">
-          <h3>Maria Souza</h3>
-          <p>Diarista</p>
-          <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-          
-        </div>
-        <!-- PROFISSIONAIS 03-->
-        <div class="card">
-        
-          <img src="img/eletricista.PNG">
-          <h3>Carlos Lima</h3>
-          <p>Encanador</p>
-          <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-        
-        </div>
-        <!-- PROFISSIONAIS 04-->
-        <div class="card">
-
-          <img src="img/eletricista.PNG">
-          <h3>Carlos Lima</h3>
-          <p>Encanador</p>
-          <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-        
-        </div>
-        <!-- PROFISSIONAIS 05-->
-        <div class="card">
-          
-          <img src="img/eletricista.PNG">
-          <h3>Carlos Lima</h3>
-          <p>Encanador</p>
-          <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-
-        </div>
-        <!-- PROFISSIONAIS 06-->
-        <div class="card">
-          
-          <img src="img/eletricista.PNG">
-          <h3>Carlos Lima</h3>
-          <p>Encanador</p>
-          <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-        
-        </div>
-        <!-- PROFISSIONAIS 07-->
-        <div class="card">
-          
-          <img src="img/eletricista.PNG">
-          <h3>Carlos Lima</h3>
-          <p>Encanador</p>
-          <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-        
+    <header class="navbar">
+        <div class="inicio">
+            <img src="img/back-removebg-preview.png" alt="Fast Service" width="500">
         </div>
 
-        <!-- pode duplicar mais -->
+        <nav>
+            <img src="img/logo-fastservice-removebg-preview.png" alt="Logo do site" class="logo">
+
+            <ul class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">COMO FUNCIONA</a></li>
+                <li><a href="">CATEGORIAS</a></li>
+                <li><a href="">Login/Cadastro</a></li>
+                <li><a href="">PARA EMPRESAS</a></li>
+            </ul>
+
+            <div class="user-area">
+                <img src="img/user.png" alt="User" class="users" id="userIcon">
+                
+                <div class="user-menu" id="userMenu">
+                    <h3>Login</h3>
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Senha">
+                    <button>Entrar</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>O profissional certo, na hora certa, bem do seu lado.</h1>
+        <p>Encontre especialistas avaliados próximos a você.</p>
+
+        <div class="search-box">
+            <input type="text" id="servico" placeholder="O que você precisa? (ex: Eletricista, Mecânico)">
+            <input type="text" id="local" placeholder="Sua localização">
+            <button onclick="buscar()">Buscar agora</button>
+        </div>
+    </section>
+
+    <!-- PROFISSIONAIS -->
+        <section class="profissionais">
+        <h2>Profissionais próximos a você</h2>
+
+        <div class="carrossel-container">
+
+            <button class="seta esquerda" onclick="scrollCarrossel(-1)">❮</button>
+
+            <div class="carrossel" id="carrossel">
+                
+                <!-- PROFISSIONAIS 01-->
+                <div class="card">
+                    
+                    <img src="img/mecanico.PNG">
+                    <h3>João Silva</h3>
+                    <p>Eletricista</p>
+                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
+                
+                </div>
+                <!-- PROFISSIONAIS 02-->
+                <div class="card">
+                    
+                    <img src="img/eletronico.PNG">
+                    <h3>Maria Souza</h3>
+                    <p>Diarista</p>
+                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
+                    
+                </div>
+                <!-- PROFISSIONAIS 03-->
+                <div class="card">
+                
+                    <img src="img/eletricista.PNG">
+                    <h3>Carlos Lima</h3>
+                    <p>Encanador</p>
+                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
+                
+                </div>
+                <!-- PROFISSIONAIS 04-->
+                <div class="card">
+
+                    <img src="img/eletricista.PNG">
+                    <h3>Carlos Lima</h3>
+                    <p>Encanador</p>
+                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
+                
+                </div>
+                <!-- PROFISSIONAIS 05-->
+                <div class="card">
+                    
+                    <img src="img/eletricista.PNG">
+                    <h3>Carlos Lima</h3>
+                    <p>Encanador</p>
+                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
+
+                </div>
+                <!-- PROFISSIONAIS 06-->
+                <div class="card">
+                    
+                    <img src="img/eletricista.PNG">
+                    <h3>Carlos Lima</h3>
+                    <p>Encanador</p>
+                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
+                
+                </div>
+                <!-- PROFISSIONAIS 07-->
+                <div class="card">
+                    
+                    <img src="img/eletricista.PNG">
+                    <h3>Carlos Lima</h3>
+                    <p>Encanador</p>
+                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
+                
+                </div>
+
+                <!-- pode duplicar mais -->
+                
+            </div>
         
-      </div>
+            <button class="seta direita" onclick="scrollCarrossel(1)">❯</button>
+            
+        </div>
+    </section>
     
-      <button class="seta direita" onclick="scrollCarrossel(1)">❯</button>
-      
+    <div id="modalPerfil" class="modal">
+        <div class="modal-content">
+            <span onclick="fecharModal()" class="fechar">&times;</span>
+            <h2 id="nomePerfil"></h2>
+            <p>Informações do profissional...</p>
+        </div>
     </div>
-  </section>
-
-  <div id="modalPerfil" class="modal">
-    <div class="modal-content">
-      <span onclick="fecharModal()" class="fechar">&times;</span>
-      <h2 id="nomePerfil"></h2>
-      <p>Informações do profissional...</p>
-    </div>
-  </div>
-
-
 </body>
 </html>
