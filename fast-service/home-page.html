@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/home-page.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="icon" href="img/logo-fastservice-removebg-preview.png">
-    <script src="js/index.js" defer></script>
+    <script src="js/home-page.js" defer></script>
     <title>Fast Service</title>
 </head>
 <body>
@@ -30,99 +30,84 @@
     </header>
 
     <!-- HERO -->
+
     <section class="hero">
         <h1>O profissional certo, na hora certa, bem do seu lado.</h1>
         <p>Encontre especialistas avaliados próximos a você.</p>
-
+       
         <div class="search-box">
-            <input type="text" id="servico" placeholder="O que você precisa? (ex: Eletricista, Mecânico)">
-            <input type="text" id="local" placeholder="Sua localização">
-            <button onclick="buscar()">Buscar agora</button>
-        </div>
-    </section>
-
-    <!-- PROFISSIONAIS -->
-        <section class="profissionais">
-        <h2>Profissionais próximos a você</h2>
-
-        <div class="carrossel-container">
-
-            <button class="seta esquerda" onclick="scrollCarrossel(-1)">❮</button>
-
-            <div class="carrossel" id="carrossel">
-                
-                <!-- PROFISSIONAIS 01-->
-                <div class="card">
-                    
-                    <img src="img/mecanico.PNG">
-                    <h3>João Silva</h3>
-                    <p>Eletricista</p>
-                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-                
-                </div>
-                <!-- PROFISSIONAIS 02-->
-                <div class="card">
-                    
-                    <img src="img/eletronico.PNG">
-                    <h3>Maria Souza</h3>
-                    <p>Diarista</p>
-                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-                    
-                </div>
-                <!-- PROFISSIONAIS 03-->
-                <div class="card">
-                
-                    <img src="img/eletricista.PNG">
-                    <h3>Carlos Lima</h3>
-                    <p>Encanador</p>
-                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-                
-                </div>
-                <!-- PROFISSIONAIS 04-->
-                <div class="card">
-
-                    <img src="img/eletricista.PNG">
-                    <h3>Carlos Lima</h3>
-                    <p>Encanador</p>
-                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-                
-                </div>
-                <!-- PROFISSIONAIS 05-->
-                <div class="card">
-                    
-                    <img src="img/eletricista.PNG">
-                    <h3>Carlos Lima</h3>
-                    <p>Encanador</p>
-                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-
-                </div>
-                <!-- PROFISSIONAIS 06-->
-                <div class="card">
-                    
-                    <img src="img/eletricista.PNG">
-                    <h3>Carlos Lima</h3>
-                    <p>Encanador</p>
-                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-                
-                </div>
-                <!-- PROFISSIONAIS 07-->
-                <div class="card">
-                    
-                    <img src="img/eletricista.PNG">
-                    <h3>Carlos Lima</h3>
-                    <p>Encanador</p>
-                    <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
-                
-                </div>
-
-                <!-- pode duplicar mais -->
-                
+            <div class="autocomplete-container">
+                <input type="text" id="servico" placeholder="O que você precisa?" autocomplete="off">
+                <div id="lista-sugestoes" class="sugestoes-box"></div>
             </div>
-        
-            <button class="seta direita" onclick="scrollCarrossel(1)">❯</button>
-            
+
+            <div class="autocomplete-container">
+                <input type="text" id="local" placeholder="Sua localização" autocomplete="off">
+                <div id="lista-regioes" class="sugestoes-box"></div>
+            </div>
+
+            <button onclick="buscar()"> Buscar agora </button>
         </div>
     </section>
+
+    <section class="servicos">
+        <h2> NOSSOS SERVIÇOS POPULARES </h2>
+
+        <div class="grid-servicos">
+            <a href="professionals-page.html?servico=Construtor" class="card-servico">
+                <img src="img/construtor.jpeg">
+                <div>
+                    <h3>REFORMAS E MANUTENÇÃO</h3>
+                    <p>Carpintaria, pintura, pequenas obras.</p>
+                </div>
+            </a>
+
+            <a href="professionals-page.html?servico=Encanamento" class="card-servico">
+                <img src="img/hidraulica.jpeg">
+                <div>
+                    <h3>ENCANAMENTO</h3>
+                    <p>Vazamentos, instalações de água.</p>
+                </div>
+            </a>
+
+            <a href="professionals-page.html?servico=Limpeza" class="card-servico">
+                <img src="img/limpeza.jpeg">
+                <div>
+                    <h3>LIMPEZA RESIDENCIAL</h3>
+                    <p>Diárias, faxinas pesadas.</p>
+                </div>
+            </a>
+
+            <a href="professionals-page.html?servico=Eletricista" class="card-servico">
+                <img src="img/eletricista.jpeg">
+                <div>
+                    <h3>ELÉTRICA</h3>
+                    <p>Tomadas, fiação, quadros de luz.</p>
+                </div>
+            </a>
+
+            <a href="professionals-page.html?servico=Tecnologia" class="card-servico">
+                <img src="img/informatica.jpeg">
+                <div>
+                    <h3>TECNOLOGIA E SUPORTE</h3>
+                    <p>Redes, reparos de PC, software.</p>
+                </div>
+            </a>
+
+            <a href="professionals-page.html?servico=Jardinagem" class="card-servico">
+            <img src="img/jardinagem.jpeg">
+                <div>
+                    <h3>JARDINAGEM</h3>
+                    <p>Corte de grama, paisagismo.</p>
+                </div>
+            </a>
+        </div>
+
+        <a href="professionals-page.html">
+            <button class="btn-servicos">VER TODOS OS SERVIÇOS</button>
+        </a>
+    </section>
+  
     
     <div id="modalPerfil" class="modal">
         <div class="modal-content">
@@ -131,5 +116,36 @@
             <p>Informações do profissional...</p>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2>FAST SERVICE</h2>
+                <p>Conectando você aos melhores profissionais da sua região.</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="home-page.html">Home</a></li>
+                    <li><a href="professionals-page.html">Profissionais</a></li>
+                    <li><a href="login-page.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contato</h3>
+                <p>Email: contato@fastservice.com</p>
+                <p>Telefone: (21) 99999-9999</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Fast Service - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
 </body>
 </html>
+

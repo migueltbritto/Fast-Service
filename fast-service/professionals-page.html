@@ -29,23 +29,209 @@
             </div>
         </nav>
     </header>
+<section class="hero">
+  <h1>Encontre os melhores profissionais para seus serviços</h1>
+  <p>Conectamos você com especialistas confiáveis para todas as suas necessidades.</p>
+</section>
 
-    <div class="conteudo">
+<div class="container-profissionais">
 
-        <h1>CONHEÇA NOSSOS PROFISSIONAIS</h1>
 
-        <div class="lista-profissionais">
 
-        <div class="container">
-            <img src="./img/eletricista.PNG" alt="Profissional1" class="profissional">
-            <p class="texto">Eletricista
-            Nome: Miguel Nunes
-            Idade: 34 anos
-            Avaliação 4.8 ⭐ 
-            Sobre:
-            Eletricista industrial...</p>
-            <button onclick="verPerfil('Miguel Nunes')">Ver Perfil</button>
+  <!--filtro-->
+    <aside class="filtros">
+        <h3>Filtrar</h3>
+
+        <label>Serviço</label>
+        <select name="serviços" id="serviços">
+            <option>Escolha um serviço</option>
+            <option>Mecânico</option>
+            <option>Diarista</option>
+            <option>Encanador</option>
+            <option>Motorista</option>
+            <option>Eletricista</option>
+            <option>Carregador</option>
+            <option>Jardineiro</option>
+            <option>Personal</option>
+            <option>Cozinheira</option>
+            <option>Pintor</option>
+            <option>Cuidadora de Pets</option>
+        </select>
+
+    <label>Bairro</label>
+    <select>
+        <optgroup label="Zona Norte">
+            <option selected disabled>Escolha um bairro</option>
+            <option>Tijuca</option>
+            <option>Méier</option>
+            <option>Madureira</option>
+        </optgroup>
+
+        <optgroup label="Zona Sul">
+            <option>Copacabana</option>
+            <option>Ipanema</option>
+            <option>Botafogo</option>
+            <option>Leblon</option>
+        </optgroup>
+
+        <optgroup label="Zona Oeste">
+            <option>Barra da Tijuca</option>
+            <option>Bangu</option>
+            <option>Campo Grande</option>
+            <option>Santa Cruz</option>
+        </optgroup>
+
+        <optgroup label="Centro">
+            <option>Centro</option>
+            <option>Lapa</option>
+            <option>Santa Teresa</option>
+        </optgroup>
+    </select>
+    
+    <label>Ordenar por Avaliação</label>
+    <select>
+        <option>Qualquer uma</option>
+        <option>1 estrela</option>
+        <option>2 estrelas</option>
+        <option>3 estrelas</option>
+        <option>4 estrelas</option>
+        <option>5 estrelas</option>
+    </select>
+
+        <label>Preço</label>
+        <input type="range" min="50" max="100000" step="10">
+        <input type="text" placeholder="Escolha um valor máximo">  
+        <button>Aplicar Filtros</button>
+    </aside>
+
+        <!--profissionais-->
+    <section class="lista-profissionais">
+        <div class="grid-profissionais">
+
+        <div class="card">
+            <img src="img/mecanico.PNG">
+            <h3>João Silva</h3>
+            <p class="tag">Mecânico</p>
+            <p>Santa Cruz, RJ</p>
+            <p class="preco">Combinar preço</p>
+            <span>⭐⭐⭐⭐☆ (4.8)</span>
+            <button>Contratar</button>
         </div>
-    </div>
+
+        <div class="card">
+            <img src="img/diarista.PNG">
+            <h3>Maria Souza</h3>
+            <p class="tag">Diarista</p>
+            <p>Campo Grande, RJ</p>
+            <p class="preco">R$ 150 / serviço</p>
+            <span>⭐⭐⭐⭐☆ (4.7)</span>
+            <button>Contratar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/encanador.PNG">
+            <h3>Pedro Alves</h3>
+            <p class="tag">Encanador</p>
+            <p>Bangu, RJ</p>
+            <p class="preco">R$ 170 / serviço</p>
+            <span>⭐⭐⭐⭐☆ (4.5)</span>
+            <button>Contratar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/motorista.PNG">
+            <h3>Carlos Lima</h3>
+            <p class="tag">Motorista</p>
+            <p>Curicica, RJ</p>
+            <p class="preco">R$ 100 / serviço</p>
+            <span>⭐⭐⭐⭐☆ (4.6)</span>
+            <button>Contratar</button>
+        </div>
+
+        <div class="card">
+            <span class="badge">⭐ Top Avaliado</span>
+            <img src="img/eletricista.PNG">
+            <h3>Patricia Oliveira</h3>
+            <p class="tag">Eletricista</p>
+            <p>Recreio, RJ</p>
+            <p class="preco">R$ 150 / serviço</p>
+            <span>⭐⭐⭐⭐⭐ (5.0)</span>
+            <button>Contratar</button>
+        </div>
+        
+        <div class="card">
+            <img src="img/cabelereira.PNG">
+            <h3>Michele Duarte</h3>
+            <p class="tag">Cabelereira</p>
+            <p>Guaratiba, RJ</p>
+            <p class="preco">R$ 190 / serviço</p>
+            <span>⭐⭐⭐⭐☆ (4.8)</span>
+            <button>Contratar</button>
+        </div>
+        
+        <div class="card">
+            <img src="img/carregador.PNG">
+            <h3>José Oliveira</h3>
+            <p class="tag">Carregador</p>
+            <p>Guaratiba, RJ</p>
+            <p class="preco">R$ 100 / serviço</p>
+            <span>⭐⭐⭐⭐☆ (4.8)</span>
+            <button>Contratar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/jardineiro.PNG">
+            <h3>Luiz Carlos</h3>
+            <p class="tag">Jardineiro</p>
+            <p>Guaratiba, RJ</p>
+            <p class="preco">R$ 110 / serviço</p>
+            <span>⭐⭐⭐⭐☆ (4.0)</span>
+            <button>Contratar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/personal.PNG">
+            <h3>Jessica Almeida</h3>
+            <p class="tag">Personal</p>
+            <p>Guaratiba, RJ</p>
+            <p class="preco">R$ 80 / serviço</p>
+            <span>⭐⭐⭐⭐☆ (4.0)</span>
+            <button>Contratar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/cozinheira.PNG">
+            <h3>Adriana Costa</h3>
+            <p class="tag">Cozinheira</p>
+            <p>Barra da Tijuca, RJ</p>
+            <p class="preco">R$ 200 / serviço</p>
+            <span>⭐⭐⭐⭐☆ (4.9)</span>
+            <button>Contratar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/pintor.png">
+            <h3>Claudio Nunes</h3>
+            <p class="tag">Pintor</p>
+            <p>Belford roxo, RJ</p>
+            <p class="preco">R$ 180 / serviço</p>
+            <span>⭐⭐⭐⭐☆ (4.8)</span>
+            <button>Contratar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/cuidadorapet.PNG">
+            <h3>Cintia Silva</h3>
+            <p class="tag">Cuidadora de Pets</p>
+            <p>Sepetiba, RJ</p>
+            <p class="preco">R$ 100 / serviço</p>
+            <span>⭐⭐⭐⭐☆ (4.9)</span>
+            <button>Contratar</button>
+        </div>
+
+        </div>
+    </section>
+
+    </div> 
 </body>
 </html>

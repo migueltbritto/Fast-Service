@@ -15,14 +15,12 @@ font-family: Arial, sans-serif;
     position: relative;
 }
 
-/* NAV */
 nav {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* LOGO CENTRAL */
 .logo {
     position: absolute;
     left: 50%;
@@ -30,7 +28,6 @@ nav {
     width: 70px;
 }
 
-/* MENU */
 .menu {
     list-style: none;
     display: flex;
@@ -42,7 +39,6 @@ nav {
     backdrop-filter: blur(10px);
 }
 
-/* LINKS */
 .menu li a {
     text-decoration: none;
     color: rgb(22, 0, 121);
@@ -60,20 +56,17 @@ nav {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* USER */
 .users {
     width: 45px;
     cursor: pointer;
 }
 
-/* AREA DO USER */
 .user-area {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-/* MENU LOGIN */
 .user-menu {
     position: absolute;
     top: 60px;
@@ -89,14 +82,12 @@ nav {
     z-index: 1000;
 }
 
-/* INPUTS */
 .user-menu input {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-/* BOTÃO */
 .user-menu button {
     padding: 8px;
     border: none;
@@ -104,4 +95,45 @@ nav {
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
+    
+    .inicio img {
+        width: 50%;
+    }
+    
+}
+
+/*celular*/
+@media (max-width: 768px) {
+
+    nav {
+        gap: 0px;
+    }
+
+    .navbar {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .logo {
+        position: inherit;
+        justify-self: start;
+        width: 14%;
+        justify-self: start;
+        transform: translateX(1px);
+    }
+
+    .inicio img {
+        display: none;
+    }
+
+    .user-area {
+        margin-left: auto;
+    }
+
+    .menu {
+        margin-left: auto;
+    }
 }

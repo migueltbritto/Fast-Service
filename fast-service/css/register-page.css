@@ -134,3 +134,63 @@ form select:focus {
     outline: none;
     border-color: #007bff;
 }
+
+/*celular*/
+@media (max-width: 768px) {
+
+    main {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    
+    #boneco {
+        display: none;
+    }
+
+    section {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    
+    .cidade-estado {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #city {
+        width: 100%;
+        width: 280px;
+    }
+
+    .uf {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+
+    main {
+        position: static;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        padding: 20px;
+    }
+
+    #boneco {
+        width: 600px; 
+        transform: translateY(-100px);
+    }
+
+    section {
+        width: 320px;
+    }
+
+}

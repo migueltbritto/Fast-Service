@@ -9,7 +9,7 @@ body {
 
 main {
     justify-self: center;
-    transform: translateY(200px);
+    transform: translateY(100px);
     width: 350px;
     border-radius: 10px;
     background-color: white;
@@ -69,3 +69,18 @@ form button:hover {
     transform: scale(1.02);
 }
 
+@media (max-width: 768px) {
+
+    main {
+        transform: none; /* 🔥 remove o problema */
+        
+        width: 90%;
+        margin: 120px auto 20px auto;
+        /* topo  direita  baixo  esquerda */
+    }
+
+    form input,
+    form button {
+        width: 100%;
+    }
+}
