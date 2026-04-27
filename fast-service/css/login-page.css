@@ -1,82 +1,71 @@
-*{
-    /* Configurações globais para todos os elementos da página */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    list-style: none;
-    cursor: default;
 }
 
-.login-container {
-
-    /* Centraliza o container na página */
-    position: relative;
-    transform: translateX(-50%);
-    top: 100px;
-    left: 50%;
-    
-    /* Estilização do container */
-    width: 300px;
-    height: 400px;
-    background-color: #261b55;
-    border-radius: 8px;
-
+body {
+    background-color: #e1effd;
 }
 
-.conteudo {
+main {
+    justify-self: center;
+    transform: translateY(200px);
+    width: 350px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 15px 6px rgba(0, 0, 0, 0.171);
+}
 
-    color: yellow;
-
-    /* Centraliza o conteúdo dentro do container */
+.center-collumn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 50px;
+    gap: 20px;
 
-    /* Posiciona o conteúdo no centro do container */
-    top: 40%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    
+    padding: 20px;
 }
 
-.conteudo input {
-
-    /* Estilização dos campos de entrada */
-    width: 250px;
-    padding: 12px;
-    margin: 7px;
-    border-radius: 8px;
-    border: none;
-    cursor: text;
-
+main a {
+    justify-self: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: inherit;
+    color: rgb(255, 196, 0) ;
 }
 
-.conteudo button {
+main a:hover {
+    color: rgb(250, 205, 57);
+}
     
-    /* Estilização do botão de botão */
-    padding: 12px 90px;
-    border-radius: 8px;
+
+form h1 {
+    margin-top: 10px ;
+    margin-bottom: 30px;
+}
+
+form input  {
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 300px;
+    height: 45px;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    
-    /* Posicionamento do botão */
-    position: relative;
-    top: 80px;
-
+    margin-top: 70px;
 }
 
-.conteudo p {
-
-    /* Estilização do texto de informações */
-    position: relative;
-    top: -60px;
-
-    /* Estilização do texto de informações */
-    font-size: 18pt;
-    color: yellow;
-    
+form button:hover {
+    transform: scale(1.02);
 }
+

@@ -19,34 +19,33 @@
             <img src="img/logo-fastservice-removebg-preview.png" alt="Logo do site" class="logo">
 
             <ul class="menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">COMO FUNCIONA</a></li>
-                <li><a href="">CATEGORIAS</a></li>
-                <li><a href="">Login/Cadastro</a></li>
-                <li><a href="">PARA EMPRESAS</a></li>
+                <li><a href="home-page.html">HOME</a></li>
+                <li><a href="professionals-page.html">PROFISSIONAIS</a></li>
             </ul>
 
             <div class="user-area">
-                <img src="img/user.png" alt="User" class="users" id="userIcon">
-
-                <div class="user-menu" id="userMenu">
-                    <h3>Login</h3>
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Senha">
-                    <button>Entrar</button>
-                </div>
+                <a href="login-page.html"><img src="img/user.png" alt="" class="users" id="userIcon"></a>
             </div>
         </nav>
     </header>
 
-    <div class="login-container">
-        <div class="conteudo">
-            <p>Digite sua informações</p>
-            Login
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Senha">
-            <button>Entrar</button>
-        </div>
-    </div>
+    <main>
+        <form class="center-collumn" id="login">
+            <h1>Login</h1>
+
+            <label for="email">Email
+                <input type="email" name="email" placeholder="Email" id="email">
+            </label>
+            
+            <label for="password">Senha
+                <input type="password" name="password" placeholder="Senha" id="password">
+            </label>
+            
+            <button type="submit">Entrar</button>
+            <div>
+                Não tem uma conta?<a href="register-page.html"> Criar conta</a>
+            </div>
+        </form>
+    </main>
 </body>
 </html>

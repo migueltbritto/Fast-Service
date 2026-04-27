@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/register-page.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="icon" href="./imagens/logo_png.png">
-    <script src="js/index.js"></script>
     <title>Fast Service</title>
 </head>
+
 <body>
     <header class="navbar">
         <div class="inicio">
@@ -19,58 +19,64 @@
             <img src="img/logo-fastservice-removebg-preview.png" alt="Logo do site" class="logo">
 
             <ul class="menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">COMO FUNCIONA</a></li>
-                <li><a href="">CATEGORIAS</a></li>
-                <li><a href="">Login/Cadastro</a></li>
-                <li><a href="">PARA EMPRESAS</a></li>
+                <li><a href="home-page.html">HOME</a></li>
+                <li><a href="professionals-page.html">PROFISSIONAIS</a></li>
             </ul>
 
             <div class="user-area">
-                <img src="img/user.png" alt="User" class="users" id="userIcon">
-
-                <div class="user-menu" id="userMenu">
-                    <h3>Login</h3>
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Senha">
-                    <button>Entrar</button>
-                </div>
+                <a href="login-page.html">
+                    <img src="img/user.png" alt="" class="users" id="userIcon">
+                </a>
             </div>
         </nav>
     </header>
     
     <main>
-        <div class="boneco">
-            <img src="./img/Boneco.png" alt="">
-        </div>
-        <div class="form-container">
+        <img src="./img/Boneco.png" alt="" id="boneco">
 
-            <form>
-                <div class="titulo-cadastro">
-                    <img src="./img/Boneco-escada.png" alt="Trabalhador">
-                    <h2>Cadastro</h2>
+        <section>
+            <div class="register-head">
+                <img src="img/Boneco-escada.png" alt="">
+                <h1>Cadastro</h1>
+            </div>
+
+            <form class="center-collumn" id="cadastro">
+
+                <div class="campo">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" placeholder="Nome Completo" id="name" required>
                 </div>
-                
-                <!--Caixa de entrada "Nome"-->
-                <input type="text" placeholder="Nome completo" required>
-                <!--Caixa de entrada "CPF"-->
-                <input type="text" placeholder="CPF" required>
-                <!--Caixa de entrada "Data de Nascimento"-->
-                <input type="date" placeholder="DD/MM/AAAA" required>
-                <!--Caixa de entrada "E-mail"-->
-                <input type="email" placeholder="Email" required>
-                <!--Caixa de entrada "Telefone"-->
-                <input type="tel" placeholder="Telefone (11) 99999-9999" required>
-                <!--Caixa de entrada "CEP"-->
-                <input type="text" placeholder="CEP" required>
-                <!--Caixa de entrada "Endereço"-->
-                <input type="text" placeholder="Endereço (Rua, número, bairro)" required>
-                <!--Caixa de entrada "Estado/Cidade"-->
+
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Email" id="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="password">Senha</label>
+                    <input type="password" placeholder="Senha" id="password" required>
+                </div>
+
+                <div class="campo">
+                    <label for="password_confirm">Confirmar Senha</label>
+                    <input type="password" placeholder="Senha" id="password_confirm" required>
+                </div>
+
+                <div class="campo">
+                    <label for="date">Data de Nascimento</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <!-- Cidade + UF -->
                 <div class="cidade-estado">
-                    <input type="text" placeholder="Cidade" required>
-                        <select required>
-                            <!--Seleção do Estado-->
-                            <option value="UF">UF</option>
+                    <div class="campo">
+                        <label for="city">Cidade</label>
+                        <input type="text" placeholder="Cidade" id="city" required>
+                    </div>
+
+                    <div class="campo uf">
+                        <select id="uf" required>
+                            <option value="">UF</option>
                             <option value="AC">AC</option>
                             <option value="AL">AL</option>
                             <option value="AP">AP</option>
@@ -99,15 +105,25 @@
                             <option value="SE">SE</option>
                             <option value="TO">TO</option>
                         </select>
+                    </div>
                 </div>
-                <!--Caixa de entrada "Senha"-->
-                <input type="password" placeholder="Senha" required>
-                <!--Caixa de entrada "Senha Confirmação"-->
-                <input type="password" placeholder="Confirmar senha" required>
-                <!--Botão de Confirmação-->
-                <button type="submit">Cadastrar</button>
+
+                <div class="campo">
+                    <label for="sex">Gênero</label>
+                    <select id="sex">
+                        <option value="Homem">Homem</option>
+                        <option value="Mulher">Mulher</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <button type="submit">Criar conta</button>
+
+                <div>
+                    Já possui conta? <a href="login-page.html">Login</a>
+                </div>
             </form>
-        </div>
+        </section>
     </main>
 </body>
 </html>
