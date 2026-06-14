@@ -60,10 +60,27 @@
         .font-btn:disabled { opacity: 0.3; cursor: default; }
         html.dark-mode .font-btn { border-color: rgba(255, 255, 255, 0.25); }
         html.dark-mode .font-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.1); }
+
+        .logout-btn {
+            background: none;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: #c00;
+            transition: background 0.2s, color 0.2s;
+        }
+        .logout-btn:hover { background: #c00; color: white; border-color: #c00; }
+        html.dark-mode .logout-btn { border-color: rgba(255,255,255,0.25); color: #ff6b6b; }
+        html.dark-mode .logout-btn:hover { background: #c00; color: white; border-color: #c00; }
     `;
     document.head.appendChild(style);
 
     const isDark = document.documentElement.classList.contains('dark-mode');
+    const isLoggedIn = !!sessionStorage.getItem('loggedUser');
+    const userHref = isLoggedIn ? `${base}profile.html` : `${base}select-account.html`;
 
     const html = `
     <header class="navbar">
@@ -82,9 +99,10 @@
                     <button class="font-btn" id="font-increase" title="Aumentar fonte">A+</button>
                 </div>
                 <button class="dark-toggle" id="dark-toggle" title="Alternar modo escuro">${isDark ? '☀️' : '🌙'}</button>
-                <a href="${base}select-account.html">
+                <a href="${userHref}">
                     <img src="${base}img/user.png" alt="" class="users" id="userIcon">
                 </a>
+                ${isLoggedIn ? `<button class="logout-btn" id="logout-btn" title="Sair da conta">Sair</button>` : ''}
             </div>
         </nav>
     </header>`;
@@ -123,4 +141,13 @@
     document.getElementById('font-decrease').addEventListener('click', () => {
         setFontLevel(Math.max(getFontLevel() - 1, MIN_FONT));
     });
+
+    // Logout
+    if (isLoggedIn) {
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            sessionStorage.removeItem('loggedUser');
+            sessionStorage.removeItem('accountType');
+            window.location.href = `${base}home-page.html`;
+        });
+    }
 })();

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="icon" href="imagens/logo_png.png">
+    <title>Fast Service — Perfil</title>
+</head>
+
+<body>
+    <script src="js/navbar.js"></script>
+
+    <main class="profile-container" id="profile-container">
+        <!-- Renderizado por profile.js -->
+    </main>
+
+    <!-- Modal: adicionar trabalho (profissional) -->
+    <div id="portfolio-modal" class="modal">
+        <div class="modal-content">
+            <span class="fechar" id="modal-fechar">&times;</span>
+            <h3>Adicionar trabalho</h3>
+
+            <div class="portfolio-upload">
+                <input type="file" id="portfolio-photo" accept="image/*">
+                <label for="portfolio-photo" class="file-label">
+                    📁 Escolher foto
+                </label>
+                <span class="file-name" id="file-name">Nenhum arquivo selecionado</span>
+                <img id="portfolio-preview" src="" alt="Preview">
+            </div>
+
+            <div class="portfolio-desc-wrap">
+                <label for="portfolio-desc">Descrição</label>
+                <textarea id="portfolio-desc" maxlength="300" placeholder="Descreva o trabalho realizado..."></textarea>
+                <span id="portfolio-desc-count">0/300</span>
+            </div>
+
+            <button id="portfolio-save">Salvar trabalho</button>
+        </div>
+    </div>
+
+    <script src="js/profile.js" defer></script>
+</body>
+</html>

@@ -95,13 +95,27 @@
         <div class="grid-profissionais">
 
         <div class="card">
+            <span class="badge">⭐ Top Avaliado</span>
+            <img src="img/eletricista.PNG">
+            <h3>Patricia Oliveira</h3>
+            <div class="card-tags">
+                <p class="tag">Eletricista</p>
+                <span class="disponivel-tag">● Disponível agora</span>
+            </div>
+            <p>Recreio, RJ</p>
+            <p class="preco">R$ 150 / serviço</p>
+            <span>⭐⭐⭐⭐⭐ (5.0)</span>
+            <button id="btn-contratar-patricia">Contratar</button>
+        </div>
+
+        <div class="card">
             <img src="img/mecanico.PNG">
             <h3>João Silva</h3>
             <p class="tag">Mecânico</p>
             <p>Santa Cruz, RJ</p>
             <p class="preco">Combinar preço</p>
             <span>⭐⭐⭐⭐☆ (4.8)</span>
-            <button>Contratar</button>
+            <button id="btn-contratar-joao">Contratar</button>
         </div>
 
         <div class="card">
@@ -131,17 +145,6 @@
             <p>Curicica, RJ</p>
             <p class="preco">R$ 100 / serviço</p>
             <span>⭐⭐⭐⭐☆ (4.6)</span>
-            <button>Contratar</button>
-        </div>
-
-        <div class="card">
-            <span class="badge">⭐ Top Avaliado</span>
-            <img src="img/eletricista.PNG">
-            <h3>Patricia Oliveira</h3>
-            <p class="tag">Eletricista</p>
-            <p>Recreio, RJ</p>
-            <p class="preco">R$ 150 / serviço</p>
-            <span>⭐⭐⭐⭐⭐ (5.0)</span>
             <button>Contratar</button>
         </div>
 
@@ -209,6 +212,110 @@
     </section>
 
     </div>
+    <!-- Modal: Perfil Patricia Oliveira -->
+    <div id="modal-patricia" class="modal">
+        <div class="modal-content prof-modal-content">
+            <span class="fechar" id="modal-patricia-fechar">&times;</span>
+
+            <div class="prof-modal-header">
+                <img src="img/eletricista.PNG" alt="Patricia Oliveira" class="prof-modal-photo">
+                <div class="prof-modal-info">
+                    <div class="prof-modal-badges">
+                        <span class="prof-badge-top">⭐ Top Avaliado</span>
+                        <span class="prof-badge-disponivel">● Disponível agora</span>
+                    </div>
+                    <h2>Patricia Oliveira</h2>
+                    <span class="tag">Eletricista</span>
+                    <p class="prof-modal-bairro">📍 Recreio, RJ</p>
+                    <p class="preco">R$ 150 / serviço</p>
+                    <p class="prof-modal-rating">⭐⭐⭐⭐⭐ <strong>5.0</strong></p>
+                </div>
+            </div>
+
+            <div class="prof-modal-portfolio">
+                <h3>Trabalhos realizados</h3>
+                <div class="prof-work-card">
+                    <img src="img/fiação.png" alt="Trabalho de fiação elétrica">
+                    <p>Instalação e manutenção de fiação elétrica residencial.</p>
+                </div>
+            </div>
+
+            <div class="prof-modal-schedule">
+                <h3>Agendar visita</h3>
+                <div class="schedule-fields">
+                    <div class="schedule-field">
+                        <label for="p-month">Mês</label>
+                        <select id="p-month"><option value="">Mês</option></select>
+                    </div>
+                    <div class="schedule-field">
+                        <label for="p-day">Dia</label>
+                        <select id="p-day" disabled><option value="">Dia</option></select>
+                    </div>
+                    <div class="schedule-field">
+                        <label for="p-time">Horário</label>
+                        <input type="time" id="p-time">
+                    </div>
+                </div>
+                <p class="schedule-error" id="p-error">Preencha todos os campos de data e horário.</p>
+            </div>
+
+            <div class="prof-modal-actions">
+                <button class="btn-requisitar" id="btn-requisitar-patricia">Requisitar serviço</button>
+                <button class="btn-contatar" id="btn-contatar-patricia" style="display:none">Contatar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Perfil João Silva -->
+    <div id="modal-joao" class="modal">
+        <div class="modal-content prof-modal-content">
+            <span class="fechar" id="modal-joao-fechar">&times;</span>
+
+            <div class="prof-modal-header">
+                <img src="img/mecanico.PNG" alt="João Silva" class="prof-modal-photo">
+                <div class="prof-modal-info">
+                    <h2>João Silva</h2>
+                    <span class="tag">Mecânico</span>
+                    <p class="prof-modal-bairro">📍 Santa Cruz, RJ</p>
+                    <p class="preco">Combinar preço</p>
+                    <p class="prof-modal-rating">⭐⭐⭐⭐☆ <strong>4.8</strong></p>
+                </div>
+            </div>
+
+            <div class="prof-modal-portfolio">
+                <h3>Trabalhos realizados</h3>
+                <div class="prof-work-card">
+                    <img src="img/motor.png" alt="Trabalho de mecânica">
+                    <p>Revisão completa de motor e sistema de freios.</p>
+                </div>
+            </div>
+
+            <div class="prof-modal-schedule">
+                <h3>Agendar visita</h3>
+                <div class="schedule-fields">
+                    <div class="schedule-field">
+                        <label for="j-month">Mês</label>
+                        <select id="j-month"><option value="">Mês</option></select>
+                    </div>
+                    <div class="schedule-field">
+                        <label for="j-day">Dia</label>
+                        <select id="j-day" disabled><option value="">Dia</option></select>
+                    </div>
+                    <div class="schedule-field">
+                        <label for="j-time">Horário</label>
+                        <input type="time" id="j-time">
+                    </div>
+                </div>
+                <p class="schedule-error" id="j-error">Preencha todos os campos de data e horário.</p>
+            </div>
+
+            <div class="prof-modal-actions">
+                <button class="btn-requisitar" id="btn-agendar-joao">Agendar</button>
+                <button class="btn-contatar" id="btn-contatar-joao" style="display:none">Contatar</button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/professionals.js" defer></script>
 </body>
 </html>

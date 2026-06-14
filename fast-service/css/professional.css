@@ -28,29 +28,260 @@ body {
 
 
 .modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
 }
 
+.modal.open { display: flex; }
+
 .modal-content {
-  background: white;
-  margin: 10% auto;
-  padding: 20px;
-  width: 300px;
-  border-radius: 10px;
-  text-align: center;
+    background: white;
+    border-radius: 16px;
+    padding: 0;
+    width: 560px;
+    max-width: 94vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
 }
 
 .fechar {
-  float: right;
-  cursor: pointer;
-  font-size: 20px;
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+    z-index: 1;
+    user-select: none;
 }
+
+.fechar:hover { color: #000; }
+
+/* ── PERFIL DO PROFISSIONAL (MODAL) ── */
+.prof-modal-header {
+    display: flex;
+    gap: 20px;
+    padding: 28px 28px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center;
+}
+
+.prof-modal-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.prof-modal-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.prof-badge-top {
+    background: #ffd700;
+    color: #5a3e00;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.prof-badge-disponivel {
+    background: #e6f7ee;
+    color: #1a7a3e;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.prof-modal-info h2 {
+    font-size: 1.3rem;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.prof-modal-info .tag {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.prof-modal-bairro {
+    font-size: 14px;
+    color: #666;
+    margin: 6px 0;
+}
+
+.prof-modal-rating {
+    font-size: 14px;
+    color: #555;
+    margin-top: 4px;
+}
+
+.prof-modal-portfolio {
+    padding: 20px 28px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.prof-modal-portfolio h3 {
+    font-size: 0.95rem;
+    color: #0057b8;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e6f0ff;
+}
+
+.prof-work-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #fafafa;
+    max-width: 300px;
+}
+
+.prof-work-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.prof-work-card p {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.prof-modal-actions {
+    display: flex;
+    gap: 12px;
+    padding: 20px 28px;
+}
+
+.btn-requisitar {
+    flex: 1;
+    padding: 11px;
+    background: #0057b8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-requisitar:hover { background: #003f88; }
+
+.btn-contatar {
+    flex: 1;
+    padding: 11px;
+    background: #ffcc00;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-contatar:hover { background: #e6b800; }
+
+/* ── AGENDAMENTO ── */
+.prof-modal-schedule {
+    padding: 20px 28px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.prof-modal-schedule h3 {
+    font-size: 0.95rem;
+    color: #0057b8;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e6f0ff;
+}
+
+.schedule-fields {
+    display: flex;
+    gap: 16px;
+}
+
+.schedule-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.schedule-field label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+}
+
+.schedule-field input,
+.schedule-field select {
+    padding: 9px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+}
+
+.schedule-field input:focus,
+.schedule-field select:focus {
+    outline: none;
+    border-color: #0057b8;
+}
+
+.schedule-field select:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.schedule-error {
+    color: #c00;
+    font-size: 12px;
+    margin-top: 8px;
+    display: none;
+}
+
+/* dark mode: modal do profissional */
+html.dark-mode .prof-modal-header { border-color: #2a2a2a; }
+html.dark-mode .prof-modal-portfolio { border-color: #2a2a2a; }
+html.dark-mode .prof-modal-portfolio h3 { color: #4da3ff; border-color: #2a2a2a; }
+html.dark-mode .prof-work-card { background: #252525; }
+html.dark-mode .prof-work-card p { color: #ccc; }
+html.dark-mode .prof-modal-bairro { color: #999; }
+html.dark-mode .prof-modal-rating { color: #bbb; }
+html.dark-mode .prof-modal-info h2 { color: #e0e0e0; }
+html.dark-mode .fechar { color: #aaa; }
+html.dark-mode .fechar:hover { color: #fff; }
+html.dark-mode .prof-modal-schedule { border-color: #2a2a2a; }
+html.dark-mode .prof-modal-schedule h3 { color: #4da3ff; border-color: #2a2a2a; }
+html.dark-mode .schedule-field label { color: #bbb; }
+html.dark-mode .schedule-field input,
+html.dark-mode .schedule-field select { background: #252525; color: #e0e0e0; border-color: #3a3a3a; }
+html.dark-mode .schedule-field input:focus,
+html.dark-mode .schedule-field select:focus { border-color: #4da3ff; }
+html.dark-mode .prof-badge-disponivel { background: #0a2a18; color: #4dbb7a; }
 
 .grid-profissionais {
   display: grid;
@@ -168,6 +399,29 @@ body {
   font-weight: bold;
   color: #050113; /* verde = dinheiro */
   margin: 5px 0;
+}
+
+.card-tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.disponivel-tag {
+    display: inline-block;
+    background: #e6f7ee;
+    color: #1a7a3e;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+html.dark-mode .disponivel-tag {
+    background: #0a2a18;
+    color: #4dbb7a;
 }
 
 .badge {

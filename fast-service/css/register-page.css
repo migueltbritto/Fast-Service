@@ -179,6 +179,12 @@ form select:focus {
     
 }
 
+/* Dark mode: main é só container, não card — remove o fundo escuro */
+html.dark-mode body main {
+    background: transparent;
+    box-shadow: none;
+}
+
 @media (max-width: 1024px) {
 
     main {

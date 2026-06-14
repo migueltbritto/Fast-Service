@@ -1,0 +1,489 @@
+body {
+    background-color: #f5f7fa;
+}
+
+.profile-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+
+/* ── HEADER ── */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0057b8, #4da3ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    user-select: none;
+}
+
+.profile-header-info h1 {
+    font-size: 1.6rem;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.profile-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.profile-badge--user         { background: #e6f7ee; color: #1a7a3e; }
+.profile-badge--professional { background: #e6f0ff; color: #0057b8; }
+.profile-badge--enterprise   { background: #fff3e0; color: #e65100; }
+
+.profile-service-area {
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ── CORPO ── */
+.profile-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.profile-body--single {
+    grid-template-columns: 1fr;
+}
+
+/* ── CARDS ── */
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.profile-card h2 {
+    font-size: 1rem;
+    color: #0057b8;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e6f0ff;
+}
+
+/* ── INFO ── */
+.profile-info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+.info-row:last-child { border-bottom: none; }
+
+.info-label {
+    color: #888;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.info-value {
+    color: #222;
+    font-weight: 500;
+    text-align: right;
+    word-break: break-word;
+}
+
+/* ── DESCRIÇÃO ── */
+#profile-desc {
+    width: 100%;
+    height: 170px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+#profile-desc:focus {
+    outline: none;
+    border-color: #0057b8;
+}
+
+.desc-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#desc-count { font-size: 12px; color: #999; }
+
+#desc-save {
+    background: #0057b8;
+    color: white;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+#desc-save:hover { background: #003f88; }
+
+/* ── PORTFÓLIO ── */
+.profile-portfolio {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e6f0ff;
+}
+
+.portfolio-header h2 {
+    font-size: 1rem;
+    color: #0057b8;
+    margin: 0;
+}
+
+#btn-add-work {
+    background: #ffcc00;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+#btn-add-work:hover { background: #e6b800; }
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.portfolio-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-card p {
+    padding: 10px 12px;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.portfolio-remove {
+    display: block;
+    margin: 0 10px 10px;
+    padding: 6px;
+    background: #ffecec;
+    color: #cc0000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.portfolio-remove:hover { background: #ffcccc; }
+
+.portfolio-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #aaa;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+/* ── MODAL ── */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open { display: flex; }
+
+.modal-content {
+    background: white;
+    border-radius: 14px;
+    padding: 28px;
+    width: 440px;
+    max-width: 92vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content h3 {
+    margin: 0;
+    color: #1a1a2e;
+    font-size: 1.1rem;
+}
+
+.fechar {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+}
+
+.fechar:hover { color: #000; }
+
+.portfolio-desc-wrap label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* ── FILE INPUT CUSTOMIZADO ── */
+.portfolio-upload {
+    position: relative;
+}
+
+#portfolio-photo {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.file-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #f0f6ff;
+    border: 2px dashed #0057b8;
+    color: #0057b8;
+    padding: 16px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s, border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.file-label:hover {
+    background: #ddeaff;
+    border-color: #003f88;
+}
+
+.file-name {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    display: block;
+    margin-top: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+html.dark-mode .file-label {
+    background: #1a2a3a;
+    border-color: #4da3ff;
+    color: #4da3ff;
+}
+
+html.dark-mode .file-label:hover {
+    background: #1e3558;
+    border-color: #80c1ff;
+}
+
+html.dark-mode .file-name { color: #666; }
+
+#portfolio-preview {
+    display: none;
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin-top: 8px;
+}
+
+#portfolio-desc {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+#portfolio-desc:focus { outline: none; border-color: #0057b8; }
+
+#portfolio-desc-count {
+    font-size: 12px;
+    color: #999;
+    text-align: right;
+    display: block;
+}
+
+#portfolio-save {
+    background: #0057b8;
+    color: white;
+    border: none;
+    padding: 11px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+#portfolio-save:hover { background: #003f88; }
+
+/* ── ESTADO VAZIO (sem login) ── */
+.profile-no-login {
+    text-align: center;
+    padding: 80px 20px;
+    color: #666;
+}
+
+.profile-no-login h2 { margin-bottom: 16px; color: #333; }
+
+.profile-no-login a {
+    display: inline-block;
+    margin-top: 12px;
+    background: #0057b8;
+    color: white;
+    padding: 10px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.profile-no-login a:hover { background: #003f88; }
+
+/* ── DARK MODE ── */
+
+/* Neutraliza a regra genérica de dark-mode.css que aplica fundo ao <main> */
+html.dark-mode .profile-container {
+    background: transparent;
+    box-shadow: none;
+}
+
+html.dark-mode .profile-header,
+html.dark-mode .profile-card,
+html.dark-mode .profile-portfolio,
+html.dark-mode .modal-content {
+    background: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .profile-header-info h1,
+html.dark-mode .modal-content h3 { color: #e0e0e0; }
+
+html.dark-mode .profile-card h2,
+html.dark-mode .portfolio-header h2 { color: #4da3ff; border-color: #2a2a2a; }
+
+html.dark-mode .portfolio-header { border-color: #2a2a2a; }
+
+html.dark-mode .info-row { border-color: #2a2a2a; }
+html.dark-mode .info-label { color: #888; }
+html.dark-mode .info-value { color: #e0e0e0; }
+html.dark-mode .profile-service-area { color: #999; }
+
+html.dark-mode #profile-desc,
+html.dark-mode #portfolio-desc {
+    background: #252525;
+    color: #e0e0e0;
+    border-color: #3a3a3a;
+}
+
+html.dark-mode .portfolio-card { background: #252525; }
+html.dark-mode .portfolio-card p { color: #ccc; }
+html.dark-mode #portfolio-preview { border-color: #3a3a3a; }
+html.dark-mode .fechar { color: #aaa; }
+html.dark-mode .fechar:hover { color: #fff; }
+html.dark-mode .portfolio-empty { color: #555; }
+
+/* ── RESPONSIVO ── */
+@media (max-width: 720px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-body {
+        grid-template-columns: 1fr;
+    }
+}
