@@ -10,25 +10,7 @@
 </head>
 
 <body>
-
-    <header class="navbar">
-        <div class="inicio">
-            <img src="img/back-removebg-preview.png" alt="Fast Service" width="500">
-        </div>
-
-        <nav>
-            <img src="img/logo-fastservice-removebg-preview.png" alt="Logo do site" class="logo">
-
-            <ul class="menu">
-                <li><a href="home-page.html">HOME</a></li>
-                <li><a href="professionals-page.html">PROFISSIONAIS</a></li>
-            </ul>
-
-            <div class="user-area">
-                <a href="select-account.html"><img src="img/user.png" alt="" class="users" id="userIcon"></a>
-            </div>
-        </nav>
-    </header>
+    <script src="js/navbar.js"></script>
 <section class="hero">
   <h1>Encontre os melhores profissionais para seus serviços</h1>
   <p>Conectamos você com especialistas confiáveis para todas as suas necessidades.</p>
@@ -36,20 +18,19 @@
 
 <div class="container-profissionais">
 
-
-
   <!--filtro-->
     <aside class="filtros">
         <h3>Filtrar</h3>
 
         <label>Serviço</label>
-        <select name="serviços" id="serviços">
-            <option>Escolha um serviço</option>
+        <select id="filter-servico">
+            <option value="">Escolha um serviço</option>
             <option>Mecânico</option>
             <option>Diarista</option>
             <option>Encanador</option>
             <option>Motorista</option>
             <option>Eletricista</option>
+            <option>Cabelereira</option>
             <option>Carregador</option>
             <option>Jardineiro</option>
             <option>Personal</option>
@@ -59,9 +40,9 @@
         </select>
 
     <label>Bairro</label>
-    <select>
+    <select id="filter-bairro">
+        <option value="" selected disabled>Escolha um bairro</option>
         <optgroup label="Zona Norte">
-            <option selected disabled>Escolha um bairro</option>
             <option>Tijuca</option>
             <option>Méier</option>
             <option>Madureira</option>
@@ -78,7 +59,11 @@
             <option>Barra da Tijuca</option>
             <option>Bangu</option>
             <option>Campo Grande</option>
+            <option>Curicica</option>
+            <option>Guaratiba</option>
+            <option>Recreio</option>
             <option>Santa Cruz</option>
+            <option>Sepetiba</option>
         </optgroup>
 
         <optgroup label="Centro">
@@ -87,21 +72,22 @@
             <option>Santa Teresa</option>
         </optgroup>
     </select>
-    
-    <label>Ordenar por Avaliação</label>
-    <select>
-        <option>Qualquer uma</option>
-        <option>1 estrela</option>
-        <option>2 estrelas</option>
-        <option>3 estrelas</option>
-        <option>4 estrelas</option>
-        <option>5 estrelas</option>
+
+    <label>Avaliação mínima</label>
+    <select id="filter-avaliacao">
+        <option value="">Qualquer uma</option>
+        <option value="1">1 estrela ou mais</option>
+        <option value="2">2 estrelas ou mais</option>
+        <option value="3">3 estrelas ou mais</option>
+        <option value="4">4 estrelas ou mais</option>
+        <option value="5">5 estrelas</option>
     </select>
 
-        <label>Preço</label>
-        <input type="range" min="50" max="100000" step="10">
-        <input type="text" placeholder="Escolha um valor máximo">  
-        <button>Aplicar Filtros</button>
+        <label>Preço máximo</label>
+        <input type="range" id="filter-preco-range" min="50" max="1000" step="10" value="1000">
+        <input type="text" id="filter-preco-text" placeholder="Sem limite">
+        <button id="btn-filtrar">Aplicar Filtros</button>
+        <button id="btn-limpar" style="background:#f0f0f0;color:#555;margin-top:6px;">Limpar Filtros</button>
     </aside>
 
         <!--profissionais-->
@@ -158,7 +144,7 @@
             <span>⭐⭐⭐⭐⭐ (5.0)</span>
             <button>Contratar</button>
         </div>
-        
+
         <div class="card">
             <img src="img/cabelereira.PNG">
             <h3>Michele Duarte</h3>
@@ -168,7 +154,7 @@
             <span>⭐⭐⭐⭐☆ (4.8)</span>
             <button>Contratar</button>
         </div>
-        
+
         <div class="card">
             <img src="img/carregador.PNG">
             <h3>José Oliveira</h3>
@@ -210,16 +196,6 @@
         </div>
 
         <div class="card">
-            <img src="img/pintor.png">
-            <h3>Claudio Nunes</h3>
-            <p class="tag">Pintor</p>
-            <p>Belford roxo, RJ</p>
-            <p class="preco">R$ 180 / serviço</p>
-            <span>⭐⭐⭐⭐☆ (4.8)</span>
-            <button>Contratar</button>
-        </div>
-
-        <div class="card">
             <img src="img/cuidadorapet.PNG">
             <h3>Cintia Silva</h3>
             <p class="tag">Cuidadora de Pets</p>
@@ -232,6 +208,7 @@
         </div>
     </section>
 
-    </div> 
+    </div>
+    <script src="js/professionals.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,184 @@
+/* === DARK MODE === */
+
+/* Base */
+html.dark-mode body {
+    background-color: #0f0f0f;
+    color: #e0e0e0;
+}
+
+/* Navbar */
+html.dark-mode .navbar {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+html.dark-mode .menu {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+html.dark-mode .menu li a {
+    color: #d0d0d0;
+}
+
+html.dark-mode .menu li a:hover {
+    background-color: #2a2a2a;
+    color: #ffcc00;
+}
+
+/* Toggle button */
+html.dark-mode .dark-toggle {
+    color: #e0e0e0;
+}
+
+/* Cards (home e profissionais) */
+html.dark-mode .card,
+html.dark-mode .card-servico {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+html.dark-mode .card-servico h3 {
+    color: #e0e0e0;
+}
+
+html.dark-mode .card-servico p {
+    color: #aaa;
+}
+
+html.dark-mode .card-servico:hover h3 {
+    color: #4da3ff;
+}
+
+html.dark-mode .card:hover {
+    border-color: #ffcc00;
+}
+
+/* Seção de serviços (home) */
+html.dark-mode .servicos {
+    background-color: #0f0f0f;
+}
+
+html.dark-mode .servicos h2 {
+    color: #e0e0e0;
+}
+
+/* Filtros (profissionais) */
+html.dark-mode .filtros {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+html.dark-mode .filtros label {
+    color: #d0d0d0;
+}
+
+/* Section sem classe (formulários de cadastro) */
+html.dark-mode section:not([class]) {
+    background-color: #1e1e1e;
+    box-shadow: 5px 5px 15px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Main (login e select-account) */
+html.dark-mode main {
+    background-color: #1e1e1e;
+    box-shadow: 5px 5px 15px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Formulários */
+html.dark-mode label {
+    color: #d0d0d0;
+}
+
+html.dark-mode form h1 {
+    color: #e0e0e0;
+}
+
+html.dark-mode form > div {
+    color: #aaa;
+}
+
+/* Inputs e Selects */
+html.dark-mode input,
+html.dark-mode select {
+    background-color: #252525;
+    color: #e0e0e0;
+    border-color: #3a3a3a;
+}
+
+html.dark-mode input::placeholder {
+    color: #666;
+}
+
+html.dark-mode input:focus,
+html.dark-mode select:focus {
+    border-color: #4da3ff;
+}
+
+html.dark-mode select option {
+    background-color: #252525;
+    color: #e0e0e0;
+}
+
+/* Autocomplete (home) */
+html.dark-mode .sugestoes-box {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .sugestao-item {
+    color: #e0e0e0;
+    border-bottom-color: #2a2a2a;
+}
+
+html.dark-mode .sugestao-item:hover {
+    background-color: #2a2a2a;
+}
+
+/* Tag de serviço (profissionais) */
+html.dark-mode .tag {
+    background-color: #1a2a3a;
+    color: #4da3ff;
+}
+
+/* Preço (profissionais) */
+html.dark-mode .preco {
+    color: #e0e0e0;
+}
+
+/* Modal */
+html.dark-mode .modal-content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+/* Links de navegação dentro dos forms */
+html.dark-mode section a,
+html.dark-mode main a {
+    color: #ffcc00;
+}
+
+/* Select account — botões de tipo */
+html.dark-mode .buttom-select-form {
+    filter: brightness(0.85);
+    color: #fff;
+}
+
+/* Scrollbar */
+html.dark-mode ::-webkit-scrollbar {
+    width: 8px;
+}
+
+html.dark-mode ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+html.dark-mode ::-webkit-scrollbar-thumb {
+    background: #3a3a3a;
+    border-radius: 4px;
+}
+
+html.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

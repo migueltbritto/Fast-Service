@@ -1,0 +1,64 @@
+/* === ACESSIBILIDADE — TAMANHO DE FONTE === */
+
+/* Level 1 — Médio (115%) */
+html[data-font-size="1"] {
+    font-size: 115%;
+}
+
+/* navbar */
+html[data-font-size="1"] .menu li a     { font-size: 17px; }
+
+/* home-page */
+html[data-font-size="1"] .servicos h2   { font-size: 28px; }
+html[data-font-size="1"] .card-servico h3 { font-size: 18px; }
+html[data-font-size="1"] .card-servico p  { font-size: 16px; }
+html[data-font-size="1"] .footer-box p  { font-size: 16px; }
+html[data-font-size="1"] .footer-bottom { font-size: 16px; }
+html[data-font-size="1"] .fechar        { font-size: 23px; }
+html[data-font-size="1"] .seta          { font-size: 29px; }
+
+/* professional */
+html[data-font-size="1"] .tag           { font-size: 14px; }
+html[data-font-size="1"] .preco         { font-size: 18px; }
+html[data-font-size="1"] .badge         { font-size: 14px; }
+
+/* register / login */
+html[data-font-size="1"] form button    { font-size: 18px; }
+html[data-font-size="1"] label          { font-size: 11.5pt; }
+html[data-font-size="1"] section a,
+html[data-font-size="1"] main a         { font-size: 18px; }
+
+/* select-account */
+html[data-font-size="1"] .container a   { font-size: 21pt; }
+
+
+/* Level 2 — Grande (130%) */
+html[data-font-size="2"] {
+    font-size: 130%;
+}
+
+/* navbar */
+html[data-font-size="2"] .menu li a     { font-size: 19px; }
+
+/* home-page */
+html[data-font-size="2"] .servicos h2   { font-size: 31px; }
+html[data-font-size="2"] .card-servico h3 { font-size: 21px; }
+html[data-font-size="2"] .card-servico p  { font-size: 18px; }
+html[data-font-size="2"] .footer-box p  { font-size: 18px; }
+html[data-font-size="2"] .footer-bottom { font-size: 18px; }
+html[data-font-size="2"] .fechar        { font-size: 26px; }
+html[data-font-size="2"] .seta          { font-size: 33px; }
+
+/* professional */
+html[data-font-size="2"] .tag           { font-size: 15px; }
+html[data-font-size="2"] .preco         { font-size: 21px; }
+html[data-font-size="2"] .badge         { font-size: 15px; }
+
+/* register / login */
+html[data-font-size="2"] form button    { font-size: 21px; }
+html[data-font-size="2"] label          { font-size: 13pt; }
+html[data-font-size="2"] section a,
+html[data-font-size="2"] main a         { font-size: 21px; }
+
+/* select-account */
+html[data-font-size="2"] .container a   { font-size: 23pt; }

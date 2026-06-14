@@ -12,7 +12,15 @@ font-family: Arial, sans-serif;
     justify-content: space-between;
     padding: 15px 30px;
     height: 90px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+body {
+    padding-top: 90px;
 }
 
 nav {
