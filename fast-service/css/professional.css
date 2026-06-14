@@ -481,23 +481,23 @@ html.dark-mode .disponivel-tag {
     }
 
     .container-profissionais {
-        flex-direction: column; 
+        flex-direction: column;
     }
-   
+
     .filtros {
-        width: 100%; 
+        width: 100%;
     }
-    
+
     .lista-profissionais {
         width: 100%;
     }
 
     .grid-profissionais {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .card {
-        width: 100%;    
+        width: 100%;
     }
 
     .card img {
@@ -505,4 +505,33 @@ html.dark-mode .disponivel-tag {
         height: 120px;
     }
 
+}
+
+/* modal: campos de agendamento empilhados em telas pequenas */
+@media (max-width: 540px) {
+
+    .schedule-fields {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .prof-modal-actions {
+        flex-direction: column;
+    }
+
+    .btn-requisitar,
+    .btn-contatar {
+        width: 100%;
+    }
+
+    .prof-modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .prof-modal-photo {
+        width: 90px;
+        height: 90px;
+    }
 }

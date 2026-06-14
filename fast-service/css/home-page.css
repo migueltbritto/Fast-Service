@@ -358,11 +358,43 @@ html, body {
 @media (max-width: 768px) {
 
     .hero {
-        height: 550px;
-        padding-top: 100px;
+        height: auto;
+        min-height: 380px;
+        padding: 60px 16px 40px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
     }
 
     .search-box {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .autocomplete-container {
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .sugestoes-box {
+        width: 100%;
     }
 }

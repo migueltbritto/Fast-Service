@@ -105,43 +105,88 @@ nav {
     border-radius: 5px;
 }
 
+/* tablet e celular — controles saem do nav e vão para o painel de opções */
 @media (max-width: 1024px) {
-    
-    .inicio img {
-        width: 50%;
-    }
-    
-}
 
-/*celular*/
-@media (max-width: 768px) {
-
-    nav {
-        gap: 0px;
-    }
-
-    .navbar {
-        padding: 15px;
-        width: 100%;
-    }
-
-    .logo {
-        position: inherit;
-        justify-self: start;
-        width: 14%;
-        justify-self: start;
-        transform: translateX(1px);
-    }
-
-    .inicio img {
+    /* esconde apenas os controles que ficam no navbar */
+    .user-area .font-controls,
+    .user-area .dark-toggle,
+    .user-area .logout-btn {
         display: none;
     }
 
+    /* garante que os controles dentro do painel fiquem visíveis */
+    .settings-item .font-controls { display: flex; }
+    .settings-item .dark-toggle   { display: inline-block; }
+    .settings-item .logout-btn    { display: inline-block; }
+
+    .settings-btn {
+        display: block;
+    }
+
+    .inicio img {
+        width: 50%;
+    }
+}
+
+/* tablet / celular */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 10px 12px;
+    }
+
+    .inicio {
+        display: none;
+    }
+
+    nav {
+        flex: 1;
+        position: relative;
+        gap: 0;
+        justify-content: flex-start;
+    }
+
+    /* logo fixada à esquerda */
+    .logo {
+        position: static;
+        width: 42px;
+        flex-shrink: 0;
+        transform: none;
+    }
+
+    /* menu centralizado no nav com position absolute */
+    .menu {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        gap: 8px;
+        padding: 5px 10px;
+    }
+
+    .menu li a {
+        font-size: 13px;
+        padding: 3px 6px;
+    }
+
+    /* ícones à direita */
     .user-area {
         margin-left: auto;
+        gap: 6px;
+    }
+}
+
+/* celular pequeno */
+@media (max-width: 480px) {
+
+    .menu li a {
+        font-size: 12px;
+        padding: 3px 5px;
     }
 
     .menu {
-        margin-left: auto;
+        gap: 4px;
+        padding: 4px 6px;
     }
 }

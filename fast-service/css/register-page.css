@@ -16,6 +16,7 @@ main {
     top: 120px;
     display: flex;
     gap: 50px;
+    max-width: 100%;
 }
 
 .register-head {
@@ -41,8 +42,11 @@ section {
 
 /* IMAGEM */
 #boneco {
-    width: 1000px;
-    height: 100%;
+    width: 500px;
+    max-width: 45vw;
+    height: auto;
+    object-fit: contain;
+    align-self: center;
 }
 
 /* FORM */
@@ -140,18 +144,44 @@ form select:focus {
 }
 
 
-/*celular*/
-@media (max-width: 768px) {
+/* Dark mode: main é só container, não card — remove o fundo escuro */
+html.dark-mode body main {
+    background: transparent;
+    box-shadow: none;
+}
+
+/*tablet*/
+@media (max-width: 1024px) {
 
     main {
         position: static;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         gap: 20px;
         padding: 20px;
     }
 
-    
+    #boneco {
+        width: 380px;
+        max-width: 45vw;
+        transform: none;
+    }
+
+    section {
+        width: min(350px, 100%);
+    }
+
+}
+
+/*celular*/
+@media (max-width: 768px) {
+
+    main {
+        flex-direction: column;
+        padding: 16px;
+    }
+
     #boneco {
         display: none;
     }
@@ -161,47 +191,14 @@ form select:focus {
         max-width: 350px;
     }
 
-    
     .cidade-estado {
-        display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
-    #city {
-        width: 100%;
-        width: 280px;
-    }
-
+    #city,
     .uf {
         width: 100%;
-    }
-    
-}
-
-/* Dark mode: main é só container, não card — remove o fundo escuro */
-html.dark-mode body main {
-    background: transparent;
-    box-shadow: none;
-}
-
-@media (max-width: 1024px) {
-
-    main {
-        position: static;
-        justify-content: center;
-        align-items: center;
-        gap: 0px;
-        padding: 20px;
-    }
-
-    #boneco {
-        width: 600px; 
-        transform: translateY(-100px);
-    }
-
-    section {
-        width: 320px;
     }
 
 }

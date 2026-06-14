@@ -26,7 +26,6 @@
         sessionStorage.setItem('loggedUser', JSON.stringify(user));
     }
 
-    // ── Helpers ───────────────────────────────────────────────────────────────
 
     function fmtDate(str) {
         if (!str) return '—';
@@ -47,8 +46,6 @@
             <span class="info-value">${value || '—'}</span>
         </div>`;
     }
-
-    // ── Renderização ─────────────────────────────────────────────────────────
 
     function renderInfoRows() {
         if (user.type === 'enterprise') {

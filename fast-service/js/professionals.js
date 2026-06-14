@@ -192,7 +192,6 @@
     document.getElementById('btn-contratar-patricia').addEventListener('click', () => {
         const loggedUser   = JSON.parse(sessionStorage.getItem('loggedUser') || 'null');
         const isEnterprise = loggedUser?.type === 'enterprise';
-        // Azul "Requisitar serviço" → todos; Amarelo "Contatar"→"Agendar" → só empresa
         document.getElementById('btn-requisitar-patricia').style.display = '';
         btnContatarPatricia.style.display = isEnterprise ? '' : 'none';
         btnContatarPatricia.textContent   = 'Contatar';

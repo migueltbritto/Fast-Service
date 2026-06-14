@@ -14,6 +14,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 450px;
+    max-width: calc(100vw - 32px);
     margin: auto;
     transform: translateY(100px);
 
@@ -50,5 +51,21 @@ main {
 }
 
 @media (max-width: 768px) {
-    
+
+    main {
+        width: 90%;
+        max-width: 450px;
+        transform: none;
+        margin: 120px auto 40px;
+    }
+
+    .container {
+        gap: 24px;
+        margin: 40px auto;
+    }
+
+    .buttom-select-form {
+        width: 100%;
+        max-width: 280px;
+    }
 }
