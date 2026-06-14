@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login-page.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="icon" href="../img/logo-fastservice-removebg-preview.png">
+    <script src="../js/form.js" defer></script>
+    <title>Fast Service</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="inicio">
+            <img src="../img/back-removebg-preview.png" alt="Fast Service" width="500">
+        </div>
+
+        <nav>
+            <img src="../img/logo-fastservice-removebg-preview.png" alt="Logo do site" class="logo">
+
+            <ul class="menu">
+                <li><a href="../home-page.html">HOME</a></li>
+                <li><a href="../professionals-page.html">PROFISSIONAIS</a></li>
+            </ul>
+            
+            <div class="user-area">
+                <a href="../select-account.html"><img src="../img/user.png" alt="" class="users" id="userIcon"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <form class="center-collumn" id="login">
+            <h1>Login</h1>
+
+            <label for="email">Email
+                <input type="email" name="email" placeholder="Email" id="email">
+            </label>
+            
+            <label for="password">Senha
+                <input type="password" name="password" placeholder="Senha" id="password">
+            </label>
+            
+            <button type="submit">Entrar</button>
+            <div>
+                Não tem uma conta?<a href="user_register_form.html" id="criar-conta-link"> Criar conta</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e1effd;
+}
+
+main {
+    justify-self: center;
+    transform: translateY(100px);
+    width: 350px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 15px 6px rgba(0, 0, 0, 0.171);
+}
+
+.center-collumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px;
+}
+
+main a {
+    justify-self: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: inherit;
+    color: rgb(255, 196, 0) ;
+}
+
+main a:hover {
+    color: rgb(250, 205, 57);
+}
+    
+
+form h1 {
+    margin-top: 10px ;
+    margin-bottom: 30px;
+}
+
+form input  {
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 300px;
+    height: 45px;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 70px;
+}
+
+form button:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+
+    main {
+        transform: none; /* 🔥 remove o problema */
+        
+        width: 90%;
+        margin: 120px auto 20px auto;
+        /* topo  direita  baixo  esquerda */
+    }
+
+    form input,
+    form button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/register-page.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="icon" href="../imagens/logo_png.png">
+    <title>Fast Service</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="inicio">
+            <img src="../img/back-removebg-preview.png" alt="Fast Service" width="500">
+        </div>
+
+        <nav>
+            <img src="../img/logo-fastservice-removebg-preview.png" alt="Logo do site" class="logo">
+
+            <ul class="menu">
+                <li><a href="../home-page.html">HOME</a></li>
+                <li><a href="../professionals-page.html">PROFISSIONAIS</a></li>
+            </ul>
+
+            <div class="user-area">
+                <a href="../select-account.html">
+                    <img src="../img/user.png" alt="" class="users" id="userIcon">
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <img src="../img/Boneco.png" alt="" id="boneco">
+
+        <section>
+            <div class="register-head">
+                <img src="../img/Boneco-escada.png" alt="">
+                <h1>Cadastro</h1>
+            </div>
+
+            <form class="center-collumn" id="cadastro" novalidate>
+
+                <div class="campo">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" placeholder="Nome Completo" id="name" name="name" required>
+                    <a>Aqui vai a mensagem de erro...</a>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Email" id="email" name="email" required>
+                    <a>Aqui vai a mensagem de erro...</a>
+                </div>
+
+                <div class="campo">
+                    <label for="password">Senha</label>
+                    <input type="password" placeholder="Senha" id="password" name="password" required>
+                    <a>Aqui vai a mensagem de erro...</a>
+                </div>
+
+                <div class="campo">
+                    <label for="password_confirm">Confirmar Senha</label>
+                    <input type="password" placeholder="Senha" id="password_confirm" name="password_confirm" required>
+                    <a>Aqui vai a mensagem de erro...</a>
+                </div>
+                
+                <div class="campo">
+                    <label for="cpf">CPF</label>
+                    <input type="text" placeholder="CPF" id="cpf" name="cpf" required>
+                    <a>Aqui vai a mensagem de erro...</a>
+                </div>
+                
+                <div class="campo">
+                    <label for="phone">Telefone</label>
+                    <input type="text" placeholder="Telefone" id="phone" name="phone" required>
+                    <a>Aqui vai a mensagem de erro...</a>
+                </div>
+
+                <div class="campo">
+                    <label for="date">Data de Nascimento</label>
+                    <input type="date" id="date" name="date" required>
+                    <a>Aqui vai a mensagem de erro...</a>
+                </div>
+
+                <!-- Cidade + UF -->
+                <div class="cidade-estado">
+                    <div class="campo">
+                        <label for="city">Cidade</label>
+                        <input type="text" placeholder="Cidade" id="city" name="city" required>
+                        <a>Aqui vai a mensagem de erro...</a>
+                    </div>
+
+                    <div class="campo uf">
+                        <select id="uf" name="uf" required>
+                            <option value="">UF</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="sex">Gênero</label>
+                    <select id="sex" name="sex">
+                        <option value="Homem">Homem</option>
+
+                        <option value="Mulher">Mulher</option>
+                        <option value="Outro">Outro</option>
+                    </select>                
+                </div>
+                
+                <button type="submit">Criar conta</button>
+
+                <div>
+                    Já possui conta? <a href="login_form.html">Login</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="../js/form.js" defer></script>
+</body>
+</html>
